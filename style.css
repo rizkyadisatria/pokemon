@@ -1,0 +1,43 @@
+*{
+    font-family: 'Press Start 2P', cursive;
+}
+
+.pokemon {
+    text-align: center;
+}
+
+.pokemon button {
+    padding: 15px 25px 15px 25px;
+    border: 1px sandybrown solid;
+    border-radius: 10px;
+    color: white;
+    background-color: sandybrown;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.result {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: burlywood;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+
+.pokemon-name {
+    margin: 0;
+    padding-top: 25px;
+    color: white;
+    font-size: 17px;
+}
+
+.desc {
+    display: none;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.desc-btn {
+    padding: 5px 10px 5px 10px !important;
+}
