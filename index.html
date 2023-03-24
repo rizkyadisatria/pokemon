@@ -24,14 +24,20 @@
 <body>
     <div class="pokemon">
         <h1 style="margin-top: 60px;">Pokemon</h1>
-        <button onclick="getApi()">Catch Pokemon</button>
-        <h1 class="recieved" style="font-size: 20px; line-height: 30px; margin-top: 50px; margin-bottom: 50px;"></h1>
-        <div class="desc">
-            you can click, <button class="desc-btn reset">Reset</button> if you dont like your current pokemon!
+        <button onclick="getApi()">Catch Single Pokemon</button>
+        <button onclick="fetchPoke()">Catch All Pokemon</button>
+        <div class="one-pokemon">
+            <h1 class="recieved" style="font-size: 20px; line-height: 30px; margin-top: 30px; margin-bottom: 30px;">
+            </h1>
+            <div class="desc">
+                you can click, <button class="desc-btn reset">Reset</button> if you dont like your current pokemon!
+            </div>
+            <div class="result" style="display: none;">
+                <h1 class="pokemon-name"></h1>
+                <img src="" width="150" height="150">
+            </div>
         </div>
-        <div class="result" style="display: none;">
-            <h1 class="pokemon-name"></h1>
-            <img src="" width="150" height="150">
+        <div class="all-pokemon">
         </div>
     </div>
     <script src="/script.js"></script>

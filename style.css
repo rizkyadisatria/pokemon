@@ -7,6 +7,8 @@
 }
 
 .pokemon button {
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 15px 25px 15px 25px;
     border: 1px sandybrown solid;
     border-radius: 10px;
@@ -40,4 +42,23 @@
 
 .desc-btn {
     padding: 5px 10px 5px 10px !important;
+}
+
+.poke-card {
+    display: inline-grid;
+    margin: 20px;
+    padding: 20px;
+}
+
+.poke-card img {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.all-pokemon {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
 }
