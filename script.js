@@ -200,8 +200,6 @@ async function fetchPoke() {
     //Push poke url to global
     pokeUrl.push(r.url);
   });
-  //Print poke url
-  console.log(pokeUrl);
 
   const request = pokeUrl.map((url) => fetch(url));
   Promise.all(request)
@@ -211,7 +209,6 @@ async function fetchPoke() {
     .then((data) => {
       // Process the data here
       data.forEach((d) => {
-        console.log(d);
         const newName = d.name.replace(/-/g, " ");
         //create pokemon card
         const div = document.createElement("div");
