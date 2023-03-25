@@ -188,7 +188,7 @@ const getApi = () => {
 let pokeUrl = [];
 
 async function fetchPoke() {
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=36", {
+  const response = await fetch("https://pokeapi.co/api/v2/pokemon?limit=144", {
     method: "GET",
   });
 
@@ -212,13 +212,14 @@ async function fetchPoke() {
       // Process the data here
       data.forEach((d) => {
         console.log(d);
+        const newName = d.name.replace(/-/g, " ");
         //create pokemon card
         const div = document.createElement("div");
         div.className = "poke-card";
         allPoke.append(div);
         //create pokemon name
         const p = document.createElement("p");
-        p.innerText = `${d.name}`;
+        p.innerText = `${newName}`;
         div.prepend(p);
         //create pokemon image
         const pokeImg = document.createElement("img");
@@ -256,6 +257,33 @@ async function fetchPoke() {
         } else if (d.types[0].type.name === "fairy") {
           div.style =
             "background-color: #eea1ea; border: #c77fbc 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "flying") {
+          div.style =
+            "background-color: #c9adec; border: #a485cc 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "rock") {
+          div.style =
+            "background-color: #b99d72; border: #957d59 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "psychic") {
+          div.style =
+            "background-color: #d053bc; border: #a44094 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "ghost") {
+          div.style =
+            "background-color: #835e94; border: #6b4c79 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "dark") {
+          div.style =
+            "background-color: #686868; border: #434343 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "steel") {
+          div.style =
+            "background-color: #598fa3; border: #517c8b 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "fighting") {
+          div.style =
+            "background-color: #e07f60; border: #b1664f 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "dragon") {
+          div.style =
+            "background-color: #8859d5; border: #724cae 2px solid; border-radius: 15px;";
+        } else if (d.types[0].type.name === "ice") {
+          div.style =
+            "background-color: #71d8de; border: #65c1c6 2px solid; border-radius: 15px;";
         }
       });
     })

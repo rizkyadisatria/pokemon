@@ -56,6 +56,11 @@
     height: 150px;
 }
 
+.poke-card p {
+    font-size: 8px;
+    width: 150px;
+    line-height: 15px;
+}
 .all-pokemon {
     width: 80%;
     margin-left: auto;
